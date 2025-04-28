@@ -1,9 +1,11 @@
-# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Terraform/Base.latest.gitlab-ci.yml
-# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Security/SAST.gitlab-ci.yml
-
 stages:
-- test
-sast:
-  stage: test
+- tagging
 include:
-- template: Security/SAST.gitlab-ci.yml
+  - project: 'gitlab/templates'
+    ref: v0.0.5
+    file: 'base.yml'
+
+git:tag:
+  stage: tagging
+  extends: [.base:ssh_script, .base:tagging]
+
