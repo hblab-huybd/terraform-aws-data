@@ -22,7 +22,7 @@ No modules.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
+| Name | Description | Type | Default | Required|
 |------|-------------|------|---------|:--------:|
 | <a name="input_aws_amis"></a> [aws\_amis](#input\_aws\_amis) | n/a | `map(any)` | <pre>{<br>  "amazonlinux2": {<br>    "filters": {<br>      "architecture": "x86_64",<br>      "name": "amzn2-ami-hvm*-gp*",<br>      "root-device-type": "ebs",<br>      "virtualization-type": "hvm"<br>    },<br>    "most_recent": true,<br>    "owners": [<br>      "amazon"<br>    ]<br>  },<br>  "ubuntu1804": {<br>    "filters": {<br>      "architecture": "x86_64",<br>      "name": "ubuntu-minimal/images/*/ubuntu-bionic-18.04-*",<br>      "root-device-type": "ebs",<br>      "virtualization-type": "hvm"<br>    },<br>    "most_recent": true,<br>    "owners": [<br>      "099720109477"<br>    ]<br>  },<br>  "ubuntu2004": {<br>    "filters": {<br>      "architecture": "x86_64",<br>      "name": "ubuntu/images/*/ubuntu-focal-20.04-amd64-*",<br>      "root-device-type": "ebs",<br>      "virtualization-type": "hvm"<br>    },<br>    "most_recent": true,<br>    "owners": [<br>      "099720109477"<br>    ]<br>  }<br>}</pre> | no |
 
